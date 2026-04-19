@@ -4,3 +4,17 @@
 
 # LangGraph
 .langgraph_api/
+
+# 虚拟环境
+lc_env/
+
+# Python 缓存
+__pycache__/
+
+# IDE 配置
+.vscode/
+
+#缓存
+chat_history/
+chroma_db/
+md5.text
