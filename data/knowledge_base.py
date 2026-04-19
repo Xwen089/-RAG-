@@ -86,3 +86,22 @@ class KnowledgeBaseService(object):
         save_md5(md5_hex) #将md5值保存到文件中，表示已经处理过了
         return "上传成功,内容已载入向量库"
 
+    def upload_batch(self, documents):
+        '''批量上传多个文档
+        documents: 列表，每个元素为字典，包含 'text', 'filename', 'page' 键
+        '''
+        results = []
+        for doc in documents:
+            text = doc.get('text', '')
+            filename = doc.get('filename', 'unknown')
+            page = doc.get('page', None)
+            
+            if not text:
+                results.append(f"{filename}: 空内容，跳过")
+                continue
+                
+            result = self.upload_by_str(text, filename, page)
+            results.append(f"{filename}: {result}")
+        
+        return results
+

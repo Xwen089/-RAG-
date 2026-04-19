@@ -63,14 +63,14 @@ export DASHSCOPE_API_KEY="your-api-key-here"
 cd data
 streamlit run app_file_uploader.py
 ```
-访问 http://localhost:8501 上传文档到知识库
+上传文档到知识库
 
 #### 2. 问答服务
 ```bash
 cd data
 streamlit run app_qa.py
 ```
-访问 http://localhost:8501 进行智能问答
+进行智能问答
 
 ## 配置说明
 
@@ -164,11 +164,10 @@ streamlit run app_qa.py
 
 ## 开发计划
 
-- [ ] 支持更多文档格式（PPT、Excel 等）
+- [√] 支持更多文档格式（word、Excel 等）
 - [ ] 添加用户认证系统
 - [ ] 实现批量文档处理
-- [ ] 增加检索结果可视化
-- [ ] 支持多语言问答
+ 
 
 ## 许可证
 
